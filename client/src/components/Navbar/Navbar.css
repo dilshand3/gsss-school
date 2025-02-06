@@ -1,0 +1,108 @@
+.main-navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 10px;
+}
+
+.title-btn {
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-1 {
+    display: flex;
+    gap: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--orange-color);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-weight: 400;
+}
+
+.btn-1>p {
+    color: whitesmoke;
+}
+
+.nav-quote {
+    color: whitesmoke;
+}
+
+.btn-2 {
+    background-color: var(--orange-color);
+    font-weight: 500;
+    color: var(--blue-color);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.navbar-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.navbar-logo span {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-logo p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.navbar-logo p:first-child {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navbar-logo p:last-child {
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.navbar-logo hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--orange-color);
+    border: none;
+}
+
+.navbar {
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+    .navbar-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
