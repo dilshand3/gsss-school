@@ -1,5 +1,9 @@
 .main-navbar {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgba(0, 33, 71, 0.7);
+    width: 100%;
+    position: fixed;
+    z-index: 3;
 }
 
 .nav-title {
@@ -40,57 +44,21 @@
 }
 
 .navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.navbar-logo img {
-    width: 55px;
+    width: 290px;
     height: 55px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.navbar-logo span {
-    display: flex;
-    flex-direction: column;
-}
-
-.navbar-logo p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: whitesmoke;
-}
-
-.navbar-logo p:first-child {
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.navbar-logo p:last-child {
-    font-size: 14px;
-    color: whitesmoke;
-}
-
-.navbar-logo hr {
-    width: 100%;
-    height: 2px;
-    background-color: var(--orange-color);
-    border: none;
 }
 
 .navbar {
-    padding: 2px 10px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 10px;
 }
 
 .nav-list {
     display: flex;
-    gap: 10px;
+    gap: 25px;
 }
 
 .nav-list a {
@@ -99,10 +67,56 @@
     font-weight: 700;
 }
 
-@media (max-width: 500px) {
+.hamburger {
+    display: none;
+}
+
+.hamburgerIcon {
+    color: whitesmoke;
+}
+
+.hamburger-List {
+    position: fixed;
+    left: -50vw;
+    top: 54.9px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: left 0.3s ease-in-out;
+}
+
+.hamburger-List.open {
+    left: 0;
+}
+
+.hamburger-List a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+@media (max-width:800px) {
+    .nav-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburgerIcon {
+        display: block;
+    }
+}
+
+@media (max-width:600px) {
+    .nav-title {
+        display: none;
+    }
+
     .navbar-logo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        width: 220px;
+        height: 45px;
     }
 }
