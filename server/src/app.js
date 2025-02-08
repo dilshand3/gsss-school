@@ -15,11 +15,17 @@ app.use(cors({
 app.use(cookieParser());
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+    res.send("server is running properly")
+})
 
 import StudentResultRoute from "./routes/studentResult.route.js";
-app.use("/admin/api",StudentResultRoute);
+app.use("/admin/api", StudentResultRoute);
 
 import adminRoute from "./routes/admin.route.js";
-app.use("/admin/api",adminRoute);
+app.use("/admin/api", adminRoute);
+
+import feedbackRoute from "./routes/feedback.route.js";
+app.use("/user/api", feedbackRoute);
 
 export { app }

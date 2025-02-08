@@ -1,0 +1,98 @@
+.login-popup {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+}
+
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blue-color);
+}
+
+.cross {
+    cursor: pointer;
+    color: var(--blue-color);
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--blue-color);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 35px; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--blue-color);
+    font-size: 13px;
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-error {
+    border: 1px solid red !important;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+}
+
+.general-error {
+    text-align: center;
+}

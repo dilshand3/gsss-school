@@ -81,4 +81,18 @@ const logout = async (req, res) => {
     }
 };
 
-export { signUp, login, logout }
+const checkUser = async (req, res) => {
+    try {
+        const userId = req.userId
+        const user = await Admin.findById(userId);
+        if (!user) {
+            return res.status(400).json({ success: false, message: "user didn't found" })
+        }
+        res.status(200).json({ success: true, message: "User found succesfully", data: user })
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({ success: false, message: "something went wrong please check the console" })
+    }
+}
+
+export { signUp, login, logout, checkUser }
