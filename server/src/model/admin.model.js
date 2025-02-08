@@ -3,11 +3,12 @@ import mongoose, { Schema } from "mongoose";
 const AdminSchema = new Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        unique : true
     },
     password: {
         type: String
     }
-}, { timestamps });
+}, { timestamps :true });
 
 export const Admin = mongoose.model("Admin", AdminSchema);
